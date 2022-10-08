@@ -1,0 +1,5 @@
+instance_key_name = "lbitc-west-test-KP"
+instance_name = "jenkins-ubu_instance"
+environment = "UBU"
+my-vpc-id = "vpc-076961ac8a4907271"
+my-subnet-id = "subnet-0b24166f8d0d55be0"
