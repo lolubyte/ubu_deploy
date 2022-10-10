@@ -8,17 +8,6 @@ variable "instance_name" {
     type = string
 }
 
-#variable "vpc_security_group_ids" {
-#  type =  map(string)
-####}
-
-# variable "vpc_security_group_ids" {
-#    type =  map(string)
-#    default = {
-#     "lbitc_Jenkins_sg" = "sg-0d5ff6e95a551b3e0"
-#   }
-# }
-
 variable "instance_allow_ssh" {
    description = "Whether or not  to allow ssh"
    type = bool
