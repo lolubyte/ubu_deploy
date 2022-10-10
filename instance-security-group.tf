@@ -1,5 +1,5 @@
 resource "aws_security_group" "lbitc_Jenkins_sg" {
-    description = "Allow Http access and Conditional ssh access"
+    description = "Allow Jenkins,Http and Conditional ssh access"
     name = "lbitc_Jenkins_sg"
     vpc_id = var.my-vpc-id
  }

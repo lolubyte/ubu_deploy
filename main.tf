@@ -48,14 +48,15 @@ data "aws_ssm_parameter" "ubuntu-focal" {
 # }
 
 resource "aws_instance" "jenkins_ubu_instance" {
-  count = 2
+  count = 3
   ami = data.aws_ssm_parameter.ubuntu-focal.value
   instance_type = "t2.micro"
   subnet_id = var.my-subnet-id
   associate_public_ip_address = "true"
   user_data = file("bootstrap.sh")
   tags = {
-    "Name" = "jenkins_ubu-${count.index}"
+  #  "Name" = "jenkins-ubu-${count.index}"
+    "Name" = "${var.instance_name}-${count.index}"
     "Team" = "DevOps"}
   key_name = var.instance_key_name
     #vpc_security_group_ids = [ aws_security_group.lbitc_Jenkins_sg.id ]

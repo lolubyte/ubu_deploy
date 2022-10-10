@@ -1,15 +1,15 @@
 #output "name" {
 #  value = "values"
 #}
-output "instance-dns" {
+output "instance_dns" {
   value = aws_instance.jenkins_ubu_instance[*].public_dns
 }
 
-output "instance-id" {
+output "instance_id" {
   value = aws_instance.jenkins_ubu_instance[*].id
 }
 
-output "instance-ip" {
+output "instance_ip" {
   value = aws_instance.jenkins_ubu_instance[*].public_ip
 }
 
