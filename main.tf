@@ -65,4 +65,5 @@ resource "aws_instance" "jenkins_ubu_instance" {
     device_name = "/dev/sda1"
     volume_size = 30
   } 
+  iam_instance_profile = aws_iam_instance_profile.jenkins_instance_profile.name
 }
