@@ -16,7 +16,7 @@ resource "aws_iam_role_policy" "jenkins_instance_logs_policy" {
 data "aws_iam_policy_document" "jenkins_instance_trust_policy" {
     statement {
         effect = "Allow"
-        actions = ["sts:Assumerole"]
+        actions = ["sts:AssumeRole"]
         principals {
             type = "Service"
             identifiers = ["ec2.amazonaws.com"]
